@@ -1,0 +1,394 @@
+/* ========== BASIC RESET & VARIABLES ========== */
+/* Variables let you change colors in one place */
+:root {
+  --navy: #1b2a41;
+  --teal: #0f7c7c;
+  --grey: #f3f5f8;
+  --text: #2b2f36;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Makes every image fill its box neatly without stretching */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keeps content centered with a maximum width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-block;
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--navy);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  margin-left: 10px;
+}
+
+.btn-outline:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-light {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+.btn-light:hover {
+  background-color: var(--grey);
+}
+
+/* ========== TOP BAR ========== */
+.top-bar {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid #dde1e7;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.nav ul {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a:hover {
+  color: var(--teal);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-actions input {
+  padding: 8px 12px;
+  border: 1px solid #c5cbd3;
+  border-radius: 4px;
+}
+
+.cart-link {
+  font-weight: bold;
+  color: var(--teal);
+}
+
+/* ========== HERO ========== */
+.hero {
+  background-color: var(--grey);
+  padding: 70px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  max-width: 460px;
+}
+
+.hero-image {
+  flex: 1;
+  height: 340px;
+  background-color: var(--navy); /* shows while the image loads */
+  border-radius: 8px;
+  overflow: hidden;              /* keeps the rounded corners on the image */
+}
+
+/* ========== GENERAL SECTIONS ========== */
+.section {
+  padding: 60px 0;
+}
+
+.section-grey {
+  background-color: var(--grey);
+}
+
+.section-title {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* ========== CATEGORIES ========== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  background-color: var(--white);
+  border: 1px solid #dde1e7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-card img {
+  height: 180px;
+  background-color: #e4e8ee;
+}
+
+.category-card:hover {
+  border-color: var(--teal);
+}
+
+.category-text {
+  padding: 14px 16px;
+}
+
+.category-text h3 {
+  color: var(--navy);
+}
+
+.category-text p {
+  font-size: 0.9rem;
+}
+
+/* ========== PRODUCTS ========== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: var(--white);
+  border: 1px solid #dde1e7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card img {
+  height: 200px;
+  background-color: #e4e8ee; /* shows while the image loads */
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+/* ========== OFFER BANNER ========== */
+.offer {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.offer h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.offer p {
+  margin-bottom: 24px;
+}
+
+/* ========== FEATURES ========== */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.feature h3 {
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+/* ========== NEWSLETTER ========== */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-family: Georgia, serif;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 12px;
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid #c5cbd3;
+  border-radius: 4px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: var(--navy);
+  color: #cfd6e0;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.footer li {
+  margin-bottom: 6px;
+}
+
+.footer a:hover {
+  color: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+}
+
+/* ========== RESPONSIVE (tablet and mobile) ========== */
+@media (max-width: 800px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 240px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .category-grid,
+  .product-grid,
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
